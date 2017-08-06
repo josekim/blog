@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic rails App for a Blog built as a learning Tool.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+However one handicap for this app is that none of the Rail Generate command could be use except for the Following Exceptions
+EXCEPTION: rails generate migration. Why? Because figuring out time-stamps is irritating.
+EXCEPTION: the generators that are required to get RSpec installed. Why? Because coordinating dependencies of a third-party gem that's used for testing is difficult.
