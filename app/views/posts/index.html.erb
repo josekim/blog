@@ -1,1 +1,18 @@
-<h1> HI i work now </h1>
+<div class="page-header">
+<h1> Welcome This is the Index Page of all the posts </h1>
+</div>
+<table class="table table-hover">
+  <tr>
+    <th>Title</th>
+    <th colspan="2">Tags</th>
+  </tr>
+
+
+<% @posts.each do |post| %>
+  <tr>
+    <td> <%= link_to(post.title,post_path(post.id)) %> </td>
+    <td> <%= post.tags.map(&:name).join(", ")%> </td>
+
+  </tr>
+<% end %>
+</table>

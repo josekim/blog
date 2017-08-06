@@ -1,1 +1,10 @@
-<h1>THis is the Show Page</h1>
+<div class="page-header col-lg-8 col-md-8 col-sm-8 col-xs-8">
+<h1> <%= @post.title %></h1>
+</div>
+
+<p class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+  <%= @post.body %>
+</p>
+<p class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+  <%= @post.tags.map(&:name).join(", ") %>
+</p>
