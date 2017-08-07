@@ -8,11 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.create(params[:post].permit(:title,:body).to_h)
+    ApplicationHelper.generate_tags_and_taggings(@post, params[:tags][:tags])
     if @post.save
       redirect_to @post
     else
-      render 'new'
+      redirect_to new_post_path
     end
 
   end
