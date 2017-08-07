@@ -1,5 +1,7 @@
 <div class="page-header col-lg-8 col-md-8 col-sm-8 col-xs-8">
 <h1> <%= @post.title %></h1>
+<%= link_to "edit", edit_post_path(@post.id), class:"btn btn-primary", role:"button" %>
+<%= link_to("delete", post_path(@post.id), method: :delete, class:"btn btn-primary", role:"button") %>
 </div>
 
 <p class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
